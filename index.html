@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patience Boutique</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+header {
+  background: #126b39;
+  color: white;
+  padding: 25px 10px;
+}
+h1 { margin: 0; }
+.produit {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 85%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ccc;
+}
+button {
+  background: #126b39;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Patience Boutique</h1>
+<p>Bienvenue dans notre boutique !</p>
+</header>
+
+<div class="produit">
+<h2>Gbanguina</h2>
+<p>Prix : 5 000 F CFA</p>
+<button onclick="commander('Gbanguina', '5000')">
+Commander
+</button>
+</div>
+
+<div class="produit">
+<h2>Sans arrêt</h2>
+<p>Prix : 5 000 F CFA</p>
+<button onclick="commander('Sans arrêt', '5000')">
+Commander
+</button>
+</div>
+
+<div class="produit">
+<h2>Papa gentil</h2>
+<p>Prix : 10 000 F CFA</p>
+<button onclick="commander('Papa gentil', '10000')">
+Commander
+</button>
+</div>
+
+<div class="produit">
+<h2>Papa miel</h2>
+<p>Prix : 10 000 F CFA</p>
+<button onclick="commander('Papa miel', '10000')">
+Commander
+</button>
+</div>
+
+<footer>
+<p>Patience Boutique</p>
+<p>Contactez-nous pour commander.</p>
+</footer>
+
+<script>
+function commander(produit, prix) {
+  let numero = prompt("Entrez votre numéro WhatsApp avec l'indicatif du pays :");
+  if (numero) {
+    let message = "Bonjour Patience Boutique, je souhaite commander " +
+      produit + " au prix de " + prix + " F CFA.";
+    alert("Merci ! Votre commande est préparée. Contactez notre boutique sur WhatsApp pour la finaliser.");
+  }
+}
+</script>
+
+</body>
+</html>
